@@ -37,7 +37,7 @@ void *mqtt_publish_thread(void *arg)
     msg.qos = 0;
     while(1) {
         sprintf(buf, "welcome to mqttclient, this is a publish test, a rand number: %d ...", random_number());
-        mqtt_publish(client, "/k02qhhr0Aqd/GC30/user/get", &msg);
+        mqtt_publish(client, "/feng/xiao/user/get", &msg);
         sleep(4);
     }
 }
@@ -55,15 +55,15 @@ int main(void)
     client = mqtt_lease();
     
     mqtt_set_port(client, "1883");
-    mqtt_set_host(client, "k02qhhr0Aqd.iot-as-mqtt.cn-shanghai.aliyuncs.com");
-    mqtt_set_client_id(client, "k02qhhr0Aqd.GC30|timestamp=2524608000000,_v=sdk-c-3.0.1.1,securemode=3,signmethod=hmacsha256,lan=C,gw=0,ext=0|");
-    mqtt_set_user_name(client, "GC30&k02qhhr0Aqd");
-    mqtt_set_password(client, "56F473B9F91AE3FE9A15F29D0861066D39D744C30F386C23E137631BA5A36E22");
+    mqtt_set_host(client, "39.107.104.113");
+    mqtt_set_client_id(client, "no");
+    mqtt_set_user_name(client, "no");
+    mqtt_set_password(client, "no");
     mqtt_set_clean_session(client, 1);
 
     mqtt_connect(client);
     
-    mqtt_subscribe(client, "/k02qhhr0Aqd/GC30/user/get", QOS0, topic1_handler);
+    mqtt_subscribe(client, "/feng/xiao/user/get", QOS0, topic1_handler);
     
     res = pthread_create(&thread1, NULL, mqtt_publish_thread, client);
     if(res != 0) {
