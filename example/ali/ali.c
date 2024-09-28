@@ -55,7 +55,7 @@ int main(void)
     client = mqtt_lease();
     
     mqtt_set_port(client, "1883");
-    mqtt_set_host(client, "39.107.104.113");
+    mqtt_set_host(client, "8.147.115.176");
     mqtt_set_client_id(client, "no");
     mqtt_set_user_name(client, "no");
     mqtt_set_password(client, "no");
