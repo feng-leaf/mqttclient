@@ -207,3 +207,9 @@ Please see the documentation:
 - [mqttclient connects to OneNET cloud platform](./docs/mqtt-onenet.md)
 
 - [mqttclient connects to Alibaba Cloud IoT platform](./docs/mqtt-aliyun.md)
+
+
+
+###by xwf
+首先执行rm -rf build，因为该文件里面包含之前编译的结果（移动文件夹位置后，要执行删除重新编译）
+sh build.sh --example

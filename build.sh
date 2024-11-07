@@ -3,7 +3,7 @@
 compiler=""
 compiler_path=""
 install=""
-install_path="/usr/local/mqttclient"
+install_path="/home/fengxiao/mqttclient"
 build_type="Release"
 build_shared="OFF"
 build_example="OFF"
